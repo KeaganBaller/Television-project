@@ -1,4 +1,5 @@
 from logic import *
+import sys
 def main():
     application = QApplication([])
     window = Logic()
@@ -7,4 +8,8 @@ def main():
 
 
 if __name__=="__main__":
-    main()
+    try:
+        main()
+    except Exception as e:
+        print(f"Error running program: {e}")
+        sys.exit(0)
