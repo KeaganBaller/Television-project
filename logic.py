@@ -96,6 +96,8 @@ class Logic(QMainWindow, Ui_MainWindow):
         if self.__status and not self.__muted:
             self.__volume = self.slider_volume.value()
             self.display_vol.display(self.__volume)
+        else: #Idk why this disappeared
+            self.slider_volume.setValue(0)
 
     def channel_up(self) -> None:
         """
